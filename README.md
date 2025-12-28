@@ -2,51 +2,42 @@
 
 > **Roblox Incremental / Progression Skateboarding Game**
 
-Skate Pro Simulator es un juego de progresión incremental en Roblox centrado en **skateboarding**, donde el jugador incrementa su **Momentum** mientras recorre un circuito de skate cada vez más exigente.
+Skate Pro Simulator es un juego de progresión incremental en Roblox centrado en **skateboarding**, donde el jugador aumenta su **Velocidad** de forma constante simplemente patinando.
 
-El *Momentum* representa la **inercia, fluidez y control** del jugador sobre la tabla, y se transforma dinámicamente en **velocidad efectiva**, determinando la distancia de los saltos, el control en rampas y la capacidad de completar el circuito.
+El juego se basa en una progresión de números cada vez mayores, circuitos progresivamente más exigentes y mundos que requieren velocidades absurdamente altas para ser completados, creando un ciclo de progreso continuo y altamente adictivo.
 
 ---
 
 ## 🎮 Concepto general
 
-El jugador comienza con un skate básico y un **Momentum muy bajo**, lo que resulta en poca velocidad y saltos prácticamente imposibles.
+El jugador comienza con un skate básico y una **velocidad extremadamente baja**, apenas suficiente para moverse.  
+Cada **paso realizado sobre la skate** incrementa la **Velocidad** del jugador en **+1**, haciendo que, con el tiempo, se mueva cada vez más rápido.
 
-Al patinar de forma continua, cada metro recorrido incrementa el Momentum, representando la energía acumulada al mantener el movimiento.
+### Al inicio:
+- El movimiento es lento
+- Los saltos son cortos
+- Completar el circuito parece imposible
 
-### El Momentum:
+### Conforme el jugador patina:
+- La velocidad aumenta de forma constante
+- Los saltos se vuelven más largos
+- El circuito se vuelve cada vez más fácil
 
-* Aumenta al patinar de forma fluida
-* Disminuye al caer, frenar bruscamente o perder el equilibrio
-
-La **velocidad efectiva** del jugador se calcula en tiempo real a partir del Momentum actual.
-
-A mayor Momentum:
-
-* Mayor velocidad
-* Saltos más largos
-* Mejor control en rampas
-
-A medida que el jugador mantiene Momentum suficiente, puede superar más secciones del circuito y alcanzar **checkpoints**, los cuales otorgan **Victorias**.
-
-Completar el circuito completo concede un lote mayor de Victorias, recompensando la ejecución limpia y continua.
+Al completar secciones del circuito y alcanzar **checkpoints**, el jugador obtiene **Victorias**, que funcionan como la moneda principal del juego.
 
 ---
 
-## 🪙 Victorias (Moneda principal)
+## 🧠 Filosofía del diseño
 
-Las Victorias funcionan como la moneda principal del juego y permiten comprar mascotas, nuevas tablas de skate y desbloquear progresión meta.
+Este juego **no busca realismo**, sino progresión exagerada:
 
-### Obtención de Victorias
+- Números grandes = progreso satisfactorio
+- Mundos nuevos = reinicio relativo de dificultad
+- La misma velocidad puede sentirse:
+  - Muy alta en un mundo
+  - Ridículamente baja en el siguiente
 
-* Alcanzar checkpoints
-* Completar el circuito completo
-
-### Ejemplo de progresión
-
-* 1er checkpoint → **+1 Victoria**
-* 2 checkpoints → **+2 Victorias**
-* Circuito completo → **+4 Victorias**
+Esto permite escalar el juego indefinidamente sin romper la experiencia.
 
 ---
 
@@ -55,78 +46,94 @@ Las Victorias funcionan como la moneda principal del juego y permiten comprar ma
 ```
 Patinar
    ↓
-Acumular Momentum
+Ganar +Velocidad por cada paso
    ↓
-Convertir Momentum en Velocidad
+Moverse y saltar más lejos
    ↓
-Saltos más largos y controlados
-   ↓
-Alcanzar checkpoints
+Alcanzar checkpoints del circuito
    ↓
 Ganar Victorias
    ↓
 Comprar Mascotas / Skates
    ↓
-Mantener Momentum más fácilmente
+Aumentar la ganancia de Velocidad
    ↓
-Completar el circuito con mayor eficiencia
-   ↺
+Completar el circuito más fácilmente
+   ↓
+Desbloquear mundos más difíciles
+↺
 ```
 
 ---
 
 ## 🧠 Mecánicas principales
 
-### 🛹 Skateboarding, Momentum y Movimiento
+### 🛹 Movimiento y Velocidad
 
-* **Momentum** es la estadística central del juego
-* Cada metro recorrido patinando = **+Momentum**
+- **Velocidad** es la estadística principal del juego
+- Cada paso realizado sobre la skate otorga: +1 Velocidad
 
-El Momentum:
 
-* Aumenta con movimiento continuo
-* Disminuye al caer o frenar
+La velocidad afecta directamente:
+- Rapidez de desplazamiento
+- Distancia de salto
+- Facilidad para completar el circuito
 
-El jugador **no controla directamente la velocidad**, sino que gestiona su Momentum.
-
-La **velocidad efectiva** se deriva del Momentum y afecta:
-
-* Velocidad de desplazamiento
-* Distancia de salto
-* Control en rampas y aterrizajes
-
-El gameplay premia mantener el flujo y penaliza los errores, simulando la sensación real de montar skate.
+No existen penalizaciones por caer:
+- Caer **no reduce la velocidad**
+- El progreso nunca se pierde
+- El juego premia la persistencia
 
 ---
 
 ## 🛣️ Mapas / Circuitos
 
-* Circuitos lineales con rampas, gaps y checkpoints
-* El progreso dentro del circuito depende del Momentum sostenido
-* Caer reduce Momentum, pero **no reinicia el progreso ganado**
+- Circuitos lineales con rampas, gaps y checkpoints
+- Cada circuito tiene:
+- Una velocidad mínima recomendada
+- Checkpoints progresivos
+- A mayor velocidad:
+- Más fácil completar el circuito
+- Más checkpoints alcanzados
+
+---
+
+## 🏆 Victorias (Moneda principal)
+
+Las **Victorias** representan el progreso dentro de los circuitos.
+
+### Obtención
+- Alcanzar checkpoints
+- Completar el circuito completo
+
+### Ejemplo
+- 1er checkpoint → **+1 Victoria**
+- 2 checkpoints → **+2 Victorias**
+- Circuito completo → **+5 Victorias**
+
+Las Victorias se usan para:
+- Comprar mascotas
+- Comprar nuevas tablas
+- Desbloquear nuevos mundos
+- Progresión futura (Rebirths)
 
 ---
 
 ## 🐾 Sistema de Mascotas
 
 ### Equipamiento
-
-* Máximo **3 mascotas equipadas**
-* Cada mascota otorga:
-
-  * Multiplicadores de ganancia de Momentum
+- Máximo **3 mascotas equipadas**
+- Las mascotas **multiplican la velocidad ganada por paso**
 
 ### Compra
-
-* Se compran con Victorias
-* Mascota inicial:
-
-  * Costo: **3 Victorias**
+- Se compran con Victorias
+- Mascota inicial:
+- Costo: **3 Victorias**
 
 ### Rarezas
 
 | Rareza    | Multiplicador |
-| --------- | ------------- |
+|-----------|---------------|
 | Common    | x1.2          |
 | Rare      | x1.5          |
 | Epic      | x2.0          |
@@ -138,49 +145,62 @@ El gameplay premia mantener el flujo y penaliza los errores, simulando la sensac
 
 ## 🛹 Tablas de Skate
 
-Las tablas influyen directamente en la progresión del jugador mediante multiplicadores.
+Las tablas funcionan como mejoras de progresión.
+
+### Función
+- Multiplican las **Victorias obtenidas**
+- No afectan la velocidad directamente
 
 ### Ejemplo
+- **Skate inicial**
+- Victorias: x1.0
 
-* **Skate inicial**
-
-  * Ganancia de Victorias: x1.0
-
-* **Segundo skate**
-
-  * Costo: **10 Victorias**
-  * Ganancia de Victorias: **x1.5**
+- **Segundo skate**
+- Costo: **10 Victorias**
+- Victorias: **x1.5**
 
 > En el futuro podrán existir tablas exclusivas o cosméticas.
+
+---
+
+## 🌍 Mundos
+
+- Cada mundo tiene:
+- Circuitos más largos
+- Saltos más exigentes
+- Requisitos de velocidad mucho mayores
+
+Aunque el jugador conserva su velocidad:
+- En un mundo nuevo, esa velocidad se siente nuevamente lenta
+- Se reinicia la sensación de progreso sin borrar estadísticas
 
 ---
 
 ## 📈 Progresión del jugador
 
 ### Inicio
-
-* Momentum bajo
-* Velocidad reducida
-* Saltos cortos
+- Velocidad muy baja
+- Progreso rápido
+- Circuito desafiante
 
 ### Medio
-
-* Mejor gestión del Momentum
-* Desbloqueo gradual del circuito
-* Decisiones estratégicas (mascotas y tablas)
+- Velocidad alta
+- Circuitos cada vez más fáciles
+- Optimización de mascotas y tablas
 
 ### Tardío
-
-* Momentum alto y estable
-* Optimización de multiplicadores
-* Ejecuciones limpias del circuito completo
+- Velocidades absurdas
+- Mundos desbloqueados
 
 ---
 
 ## 🧪 MVP (Primera versión jugable)
 
-✔ 1 mapa
-✔ 2 stats principales (Momentum y velocidad efectiva)
-✔ Mascotas básicas
-✔ 1 circuito completo
+✔ 1 mundo  
+✔ 1 circuito  
+✔ 1 stat principal (Velocidad)  
+✔ Sistema básico de Victorias  
+✔ Mascotas básicas  
+
+---
 
