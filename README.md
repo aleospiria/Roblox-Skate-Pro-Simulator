@@ -213,4 +213,29 @@ Esta es la primera versión entregable del juego, donde se ha implementado:
 - Integración inicial del stat de velocidad con el servidor para sincronización.  
 
 ![Roblox pantallazo velocidad](https://github.com/user-attachments/assets/0c02c8b1-3772-4637-8cd5-87b7a1ce915c)
-> Esta primera version aún no incluye objetos, circuitos completos ni mecánicas avanzadas, pero sienta las bases para ello.
+
+> Esta primera versión aún no incluye objetos, circuitos completos ni mecánicas avanzadas, pero sienta las bases para ello.
+
+---
+
+## 🚧 Estado actual del proyecto (Post-MVP) - 28/12/2025
+
+Se implementó el sistema base de skateboarding arcade, permitiendo que el personaje se desplace siempre sobre una tabla de skate.
+
+### Cambios principales:
+
+- Movimiento propio del skate (Ahora el personaje no se mueve, lo hace la tabla).  
+- Integración directa del stat Velocidad con el desplazamiento real para que el skate se mueva.  
+- Aceleración controlada (Evitar aceleracion exponencial).  
+- Eliminación de giros físicos no deseados para mantener un movimiento estable.  
+- Fisica integrada en el servidor para el funcionamiento del personaje con la skate.
+
+
+
+
+https://github.com/user-attachments/assets/5dceacfa-add2-4172-b740-8e598ddf15a9
+
+
+
+
+> Se espera en un proximo entregable se tendra programado el aumento de la stat con el skate (Antes funcionaba porque usaba el movimiento del jugador, y ahora no es el jugador quien se mueve, es la tabla)
