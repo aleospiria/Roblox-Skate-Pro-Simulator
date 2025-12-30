@@ -239,3 +239,45 @@ https://github.com/user-attachments/assets/5dceacfa-add2-4172-b740-8e598ddf15a9
 
 
 > Se espera en un proximo entregable se tendra programado el aumento de la stat con el skate (Antes funcionaba porque usaba el movimiento del jugador, y ahora no es el jugador quien se mueve, es la tabla)
+
+---
+
+## 🚧 Estado actual del proyecto (Pre-Alpha) – 30/12/2025
+
+En esta etapa se programo el sistema central de skateboarding arcade, sentando las bases reales del gameplay.
+
+### Avances:
+
+- Sistema de movimiento propio del skate totalmente independiente del movimiento humano por defecto.
+
+- Separación correcta entre:  
+  * Stat de velocidad (progreso)=> nunca disminuye.  
+  * Velocidad física actual=> puede acelerar, frenar y saltar sin castigar al jugador.
+
+- Progresión de Velocidad basada por tiempo en movimiento (+1 cada 0.5s patinando).
+
+- HUD de velocidad mejorado con:  
+  * Escalado visual exagerado para mayor sensación de progreso.  
+  * Transición suave de números (No saltos bruscos entre numeros).
+
+- Implementación de zonas con reglas distintas:  
+  * Lobby(rojo): velocidad y salto comprimidos para comodidad, compras y futuras mecánicas AFK.  
+  * Circuito(azul cielo): uso completo de la velocidad acumulada para progresión real.
+
+- Sistema de zonas controlado por servidor, garantizando consistencia a todos los jugadores por igual.
+
+- Integración de salto físico con skate:  
+  * El salto escala con la velocidad.  
+  * Comportamiento distinto según la zona (Lobby y Circuito).  
+
+- Movimiento mas estable.
+
+
+
+https://github.com/user-attachments/assets/dbaac48c-58e6-43d4-b8f6-f907d6511832
+
+
+
+>Ya con estas bases hechas, se espera poder añadir elementos fisicos como rampas, para ir armando un sistema de victorias de prueba
+
+---
